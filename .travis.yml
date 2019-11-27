@@ -7,11 +7,10 @@ matrix:
       env:
         - TL_PATH=$HOME/texlive/bin/x86_64-linux
         - TL_PROFILE=.ci/texlive-linux.profile
-#     - os: osx
-#       env:
-#         - TL_PATH=$HOME/texlive/bin/x86_64-darwin
-#         - TL_PROFILE=.ci/texlive-osx.profile
-# We have some issue with macOS + TexLive + Chinese fonts on CI
+    - os: osx
+      env:
+        - TL_PATH=$HOME/texlive/bin/x86_64-darwin
+        - TL_PROFILE=.ci/texlive-osx.profile
 
 before_install:
   - export PATH=$PATH:$TL_PATH
